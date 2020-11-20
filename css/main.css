@@ -1,0 +1,189 @@
+@font-face{
+    font-family: 'ethno';
+    src:url('/font/ethnocentric\ rg.ttf')format('truetype');
+}
+
+
+body{
+    width: 99vw;
+    height:100vh;
+    overflow: hidden;
+    background-color:rgba(0, 0, 0,1);
+    background-image: url('/images/dark-Vineyard.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+button{
+    outline: none;
+}
+
+#container{
+    display: grid;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    grid-template-areas: 
+    'home nav'
+    'cont cont'
+    'cont cont'
+    ;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+}
+
+#home-logo{
+    grid-area: home;
+    display:flex;
+    height: 100%;
+    width:90%;
+    margin-left: 7%;
+    overflow: hidden;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    background: none;
+   
+}
+
+#navbar{
+    grid-area: nav;
+    display: flex;
+    flex-shrink: 10;
+    flex-direction: row;
+    width: 98%;
+    height:50%;
+    margin-top: -2%;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color:red; */
+    background-color: transparent;
+    /* border: 1px solid black; */
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-top-left-radius: 2%;
+    border-bottom-left-radius: 2%;
+    box-shadow: -5px 10px 15px ;
+    background-image: url('/images/vine.png');
+    background-size: 80% 150%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#navbar h1{
+    justify-self: start;
+    color:rgb(103, 2, 218);
+    text-shadow:1px 1px 10px rgb(116, 44, 116);
+    margin-right: 8%;
+    font-size:2rem;
+    font-family: ethno;
+    line-height: 150%;
+    /* animation:glow 10s linear infinite; */
+    width:45%;
+}
+
+
+
+@keyframes glow{
+    0%{
+       text-shadow:0px 0px 0px violet;
+        color:rgb(232, 203, 233);
+    }
+    25%{
+        text-shadow:5px 5px 10px violet;
+        color:rgb(84, 31, 145);
+    }
+    50%{
+        text-shadow:5px 5px 10px rgb(116, 44, 116);
+        color:rgb(84, 31, 145);
+
+
+    }
+    100%{
+        text-shadow:0px 0px 0px violet;
+        color:rgb(232, 203, 233);
+
+    }
+}
+
+
+/* Accessing buttons in nav div  
+Here we can set image for each button ,
+on hover 
+*/
+#navbar a{
+    display: flex;
+    height: 90%;
+    width:20%;
+    margin-right: 3%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 20%;
+    background-color: rgba(0,0,0,.3);
+    box-shadow: 0px 15px 30px 5px rgba(19,0,35,.8);
+    opacity: .6;
+    transition: 1s;
+}
+
+#navbar a:hover{
+    opacity: .9;
+    text-shadow:5px 8px 0px rgb(84, 31, 145);;
+    font-size: 1.4rem;
+}
+
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: cont;
+    width: 100vw;
+    height: 105%;
+
+}
+
+#landing-content{
+     width: 95%;
+    height: 90%;
+    background-size: 130% 100%;
+    background-position: center;
+    /* background-image: url('https://media.gq.com/photos/5faaec567a1e869f28a4d859/master/pass/GameSole.jpg'); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#landing-content div{
+    width:33%;
+    height: 100%;
+    /* opacity: .2; */
+z-index: 1;
+    /* background-color: rgba(2, 44, 250,.3); */
+}
+
+#a{
+    background-size: 60% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/ps5-solo.webp');
+}
+
+#c{
+    transform: scaleX(-1);
+    background-size: 130% 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-image: url('/images/xbox-solo.png');
+}
+
+#b{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
